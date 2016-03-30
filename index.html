@@ -15,8 +15,19 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-12">
-				1 + 1 = {{ 1 + 1 }}
+			<div class="col-md-6">
+				<form class='form'>
+					<fieldset>
+						<legend><i class='glyphicon glyphicon-book'></i> Book Information</legend>
+					</fieldset>
+					<div class='form-group'>
+						<label class="form-label">Title</label>
+						<input type='text' name='title' ng-model='title' class='form-control' placeholder='Enter Book Title...' />
+					</div>
+				</form>
+			</div>
+			<div class="col-md-6">
+				Book Name: <span> {{ title }}</span>
 			</div>
 		</div>
 	</div>
