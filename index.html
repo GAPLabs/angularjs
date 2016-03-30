@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app>
+<html ng-app='BookStore'>
 <head>
 	<title>Book Store</title>
 
@@ -7,10 +7,10 @@
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 </head>
 <body>
-	<div class="container">
+	<div ng-controller='BookController' class="container">
 		<div class='row'>
 			<div class="col-md-12">
-				<h2>Book Store Application</h2>
+				<h2>{{ appTitle }}</h2>
 				<hr />
 			</div>
 		</div>
@@ -19,15 +19,37 @@
 				<form class='form'>
 					<fieldset>
 						<legend><i class='glyphicon glyphicon-book'></i> Book Information</legend>
+						<div class='form-group'>
+							<label class="form-label">Title</label>
+							<input type='text' name='title' ng-model='title' class='form-control' placeholder='Enter Book Title...' />		
+						</div>
+						<div class='form-group'>
+							<label class="form-label">Author</label>
+							<input type='text' name='title' ng-model='author' class='form-control' placeholder='Enter Book Author...' />		
+						</div>
+						<div class='form-group'>
+							<label class="form-label">Price</label>
+							<input type='text' name='title' ng-model='price' class='form-control' placeholder='Enter Book Price...'/>		
+						</div>
+						<div class="form-group">
+							<input type='submit' value='Save Book' class='btn btn-xl btn-info'/>	
+						</div>	
 					</fieldset>
-					<div class='form-group'>
-						<label class="form-label">Title</label>
-						<input type='text' name='title' ng-model='title' class='form-control' placeholder='Enter Book Title...' />
-					</div>
 				</form>
 			</div>
 			<div class="col-md-6">
-				Book Title: <span> {{ title }}</span>
+				<table class='table table-bordered table-hover table-collapse'>
+					<thead>
+						<th> TITLE </th>
+						<th> AUTHOR </th>
+						<th> PRICE </th>
+					</thead>
+					<tbody>
+						<tr class='info' >
+							<td colspan=3> <i class='glyphicon glyphicon-info-sign	'></i> No Books Found </td>
+						</tr>
+					</tbody>
+				</table>	
 			</div>
 		</div>
 	</div>
