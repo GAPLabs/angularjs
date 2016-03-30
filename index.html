@@ -38,15 +38,24 @@
 				</form>
 			</div>
 			<div class="col-md-6">
-				<table class='table table-bordered table-hover table-collapse'>
+				<div class="input-group">
+			      	<div class="input-group-btn">
+			        	<button disabled type="button" class="btn btn-info dropdown-toggle" >Search: </button>
+			        	
+			      	</div><!-- /btn-group -->
+			      <input  ng-model='search' type="text" class="form-control" aria-label="...">
+			    </div><!-- /input-group -->
+				<table style="margin-top: 20px;" class='table table-bordered table-hover table-collapse'>
 					<thead>
 						<th> TITLE </th>
 						<th> AUTHOR </th>
 						<th> PRICE </th>
 					</thead>
 					<tbody>
-						<tr class='info' >
-							<td colspan=3> <i class='glyphicon glyphicon-info-sign	'></i> No Books Found </td>
+						<tr ng-repeat="book in books | filter:search">
+							<td> {{ book.title }}  </td>
+							<td> {{ book.author }} </td>
+							<td> {{ book.price }}  </td>
 						</tr>
 					</tbody>
 				</table>	
