@@ -23,5 +23,17 @@ BookStore
 			},
 		];
 
-		
+		$scope.save = function(book) {
+
+			$scope.books.push({
+				title : $scope.title,
+				author: $scope.author,
+				price : $scope.price
+			});
+
+			$scope.title = '';
+			$scope.author = '';
+			$scope.price = '';
+		};
+
 	}]);
