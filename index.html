@@ -52,7 +52,7 @@
 						<th> PRICE </th>
 					</thead>
 					<tbody>
-						<tr ng-repeat="book in books | filter:search">
+						<tr ng-repeat="book in books | filter:search | orderBy: price : reverse = true ">
 							<td> {{ book.title }}  </td>
 							<td> {{ book.author }} </td>
 							<td> {{ book.price }}  </td>
