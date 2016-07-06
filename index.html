@@ -1,41 +1,32 @@
 <!DOCTYPE html>
 <html ng-app>
-<head>
-	<title>Book Store</title>
+	<head>
+		<title>Book Store</title>
 
-	<!-- bootstrap.min.css -->
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-</head>
-<body>
-	<div class="container">
-		<div class='row'>
-			<div class="col-md-12">
-				<h2>Book Store Application</h2>
-				<hr />
+		<!-- bootstrap.min.css -->
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h2>Book Store Application</h2>
+					<hr />
+				</div>
 			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="input-group">
+				      	Search for <input name="search" type="text" class="form-control" />
+				    </div>	
+				</div>
+				<div class="col-md-6">
+					Searched Keyword: <span> <!-- display text here --> </span>
+				</div>
+			</div>	
 		</div>
-		<div class="row">
-			<div class="col-md-6">
-				<form class='form'>
-					<fieldset>
-						<legend><i class='glyphicon glyphicon-book'></i> Book Information</legend>
-					</fieldset>
-					<div class='form-group'>
-						<label class="form-label">Title</label>
-						<input type='text' name='title' ng-model='title' class='form-control' placeholder='Enter Book Title...' />
-					</div>
-				</form>
-			</div>
-			<div class="col-md-6">
-				Book Title: <span> {{ title }}</span>
-			</div>
-		</div>
-	</div>
 
-	<!-- angular.min.js -->
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
-
-	<!-- js/app.js -->
-	<script src="js/app.js"></script>
-</body>
+		<!-- angular.min.js -->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"> </script>
+	</body>
 </html>
