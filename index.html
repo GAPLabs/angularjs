@@ -49,12 +49,18 @@
 							<th> TITLE </th>
 							<th> AUTHOR </th>
 							<th> PRICE </th>
+							<th> ACTION </th>
 						</thead>
 						<tbody>
 							<tr ng-repeat="book in books | filter:search | orderBy:'title':reverse=true">
 								<td> {{ book.title }}  </td>
 								<td> {{ book.author }} </td>
 								<td> {{ book.price }}  </td>
+								<td>
+									<button type="button" class="btn btn-danger" aria-label="Delete">
+									  	<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+									</button>
+								</td>
 							</tr>
 						</tbody>
 					</table>	
